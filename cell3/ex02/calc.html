@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calc</title>
+    <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+    <script>
+        var calc;
+        var left;
+        var right;
+        var op;
+
+        $(document).ready(function(){
+            calc = $('#calc');
+            left = $('#left');
+            right = $('#right');
+            op = $('#op');
+            calc.submit(submit);
+            setInterval("alert('Please, use me...')", 30000);
+        });
+
+        function numIsValid(l, r) {
+            return l == parseInt(l, 10) && l >= 0 && r == parseInt(r, 10) && r >= 0;
+        }
+
+        function submit(event) {
+            event.preventDefault();
+            var l = Number(left.val());
+            var r = Number(right.val());
+            if (!numIsValid(left.val(), right.val())) {
+                alert("Error :(");
+                return false;
+            }
+            switch (op.val()) {
+                case ('add'):
+                    result(l + r);
+                    break;
+                case ('mul'):
+                    result(l * r);
+                    break;
+                case ('div'):
+                    if (r === 0) {
+                        result("It's over 9000!");
+                    } else {
+                        result(l / r);
+                    }
+                    break;
+                case ('mod'):
+                    if (r === 0) {
+                        result("It's over 9000!");
+                    } else {
+                        result(l / r);
+                    }
+                    break;
+                case ('min'):
+                    result(l - r);
+                    break;
+                default:
+                    result("operation not found");
+                    break;
+            }
+        }
+
+        function result(res) {
+            console.log(res);
+            alert(res);
+        }
+    </script>
+</head>
+<body>
+    <div class="page">
+        <div class="calc">
+            <div class="circle"></div>
+            <h1>Calculadora Pokemon</h1>
+            <form action="" id="calc">
+                <input type="text" id="left">
+                <select id="op">
+                    <option value="add">+</option>
+                    <option value="min">-</option>
+                    <option value="mul">*</option>
+                    <option value="div">/</option>
+                    <option value="mod">%</option>
+                </select>
+                <input type="text" id="right">
+                <input type="submit" id="submit" value="Try me!">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

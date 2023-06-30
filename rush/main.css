@@ -1,0 +1,31 @@
+html, body {
+    width: 100%;
+    height: 100%; 
+}
+
+.index body {
+    background-image: url(https://cdn.masmovil.es/embed/d8b686df5562f243ec00ac16831812b41633389048/ordenador-fondo-animado.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    text-align: center;
+}
+
+.c1nav {
+    position: sticky;
+}
+
+.menu {
+    display: inline-flex ;
+    
+}
+
+.hector {
+    background-color: aliceblue;
+    margin: 20px 0px 20px 0px;
+}
+
+.paula {
+    background-color: aqua ;
+    margin: 20px;
+}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Básico</title>
+        <link rel="stylesheet" href="backgroound.css">
+        <script>
+            function changeColor() {
+                const randomC = Math.floor(Math.random() * 16777215).toString(16);
+                document.body.style.backgroundColor = "#" +randomC;
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="changeColor()" class=".boton">Click me!</button>
+    </body>
+</html>

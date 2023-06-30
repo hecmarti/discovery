@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <script src="todo.js"></script>
+            <style>
+                body{
+                    background-color: #926ecc ;
+                }
+
+                .centrado{
+                    align-content: center;
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%); 
+                }
+
+                .ft_list {
+                    background-color: #56299e;
+                    width: 390px ;
+                    height: 800px;
+                    border-radius: 5%;
+                    box-shadow: 7px 6px 1px rgb(100, 67, 157), 24px 3px 4px rgba(206,89,55,0);    
+                }
+
+                h1 {
+                    position: relative;
+                    top: 30px;
+                    text-align: center;
+                    color: #f8f2fc;
+                }
+
+                hr {
+                    width: 230px;
+                    position: relative;
+                    margin: 0;
+                    top: 50px;
+                }
+
+                .formulario {
+                    margin: 0;
+                    padding: 0;
+                    position: relative;
+                    top: 60px;
+                    left: 20px;
+                    width: 40px;
+                    position: relative;
+                    left: 170px;
+                }
+
+                .boton {
+                    margin: 0;
+                    padding: 8px;
+                    font-size: 20px;
+                    border-radius: 50%;
+                    border: 2px solid #56299e; 
+                    background-color: #926ecc;
+                    color: #f8f2fc;
+                    font-family: monospace;
+                }
+
+                .tasks{
+                    margin: 30px;
+                    color: #f8f2fc;
+                    font-size: 20px;
+                }
+
+               .tasks div {
+                display: flex;
+               }
+
+               button {
+                background-color: inherit;
+                border: none;
+                color: #f8f2fc;
+                width: 60px;
+               }
+
+            </style>
+        </head>
+        <body>
+            <div class="centrado">
+                <div class="ft_list">
+                        <h1>To do list</h1>
+                    <div class="formulario">
+                        <input type="button"  value="NEW" class="boton" onclick="anadir()">
+                    </div> <br> <br> <br> <br>
+                        <div class="tasks" id="tareas">
+                        </div>
+                </div>
+            </div>
+        </body>
+    </html>

@@ -1,0 +1,30 @@
+ul.menu {
+    width: 600px;
+    margin: 0 auto;
+}
+ul.menu a {
+    background: hsl(200, 80%, 50%);
+    min-width: 160px;
+    padding: 10px 0;
+    margin: 2px;
+    color: hsl(0, 0%, 100%);
+    display: block;
+    text-decoration: none;
+}
+ul.menu li {
+    text-align: center;
+}
+ul.menu > li {
+    float: left;
+}
+ul.menu .dropdown {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    min-width: 160px;
+    transition: all 0.3s ease-out;
+}
+ul.menu li:hover > .dropdown {
+    opacity: 1;
+    visibility: visible;
+}
